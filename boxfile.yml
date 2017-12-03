@@ -1,13 +1,11 @@
 run.config:
   engine: python
+  engine.config:
+    runtime: python-3.5
 
   # add extra packages
   extra_packages:
     - nginx
-
-# add a database
-data.db:
-  image: nanobox/postgresql
 
 # add a web component and give it a "start" command
 web.main:
