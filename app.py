@@ -6,10 +6,6 @@ from flask import jsonify
 
 app = Flask(__name__)
 
-@app.route('/static/<path:path>')
-def send_static(path):
-    return send_from_directory('static', path)
-
 @app.route('/')
 def hello():
     return send_from_directory('static', 'index.html')

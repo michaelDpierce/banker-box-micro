@@ -13,6 +13,9 @@ web.main:
     nginx: nginx -c /app/etc/nginx.conf
     flask: gunicorn -c /app/etc/gunicorn.py app:app
 
+  writable_dirs:
+    - tmp
+
 # add a worker component and give it a "start" command
 # worker.main:
 #   start: python worker.py
